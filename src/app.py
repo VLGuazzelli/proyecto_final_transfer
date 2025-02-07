@@ -9,7 +9,7 @@ def load_data():
     return df
 
 # Solo se ejecutará una vez si ya está en caché
-df = load_data()
+data = load_data()
 st.markdown('<style>description{color:blue;}</style>', unsafe_allow_html=True)
 st.title('Prediccin de el valor de mercado de un jugador de fútbol')
 st.markdown("<description> Descripcion a gusto </description>", unsafe_allow_html=True)
