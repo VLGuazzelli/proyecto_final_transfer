@@ -3,6 +3,10 @@ import streamlit as st
 import numpy as np
 import plotly.express as px
 
+
+le_city_ = load(open("./decision_tree_classifier_default_42.sav", "rb"))
+
+
 @st.cache(persist=True)
 def load_data():
     df = pd.read_csv("your_data.csv")
