@@ -105,7 +105,7 @@ st.write(f'La city_of_birth_le seleccionada es {city_of_birth_le}')
 if st.button("Realizar predicción"):
     try:
         # Supongamos que el modelo tiene un método predict
-        prediccion = model.predict([info][0])
+        prediccion = model.predict(info)[0]
         st.write(f"Predicción del modelo: {prediccion}")
     except Exception as e:
         st.error(f"Error al realizar la predicción: {str(e)}")
