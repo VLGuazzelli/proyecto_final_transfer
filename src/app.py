@@ -71,13 +71,14 @@ city_of_birth= st.selectbox('Select a city of birth', data['city_of_birth'])
 competition_id = st.selectbox('Select a competition', data['competition_id'])
 
 
-competition_id_le = label_encoder_competition_id.transform([competition_id])
-club_name_le = label_encoder_club_name.transform([club_name])
-foot_le = label_encoder_foot.transform([foot])
-position_le = label_encoder_position.transform([position])
-sub_position_le	 = label_encoder_sub_position.transform([sub_position])
-country_of_birth_le = label_encoder_country_of_birth.transform([country_of_birth])
-city_of_birth_le = label_encoder_city_of_birth.transform([city_of_birth])
+competition_id_le = label_encoder_competition_id.transform([competition_id])[0]
+club_name_le = label_encoder_club_name.transform([club_name])[0]
+foot_le = label_encoder_foot.transform([foot])[0]
+position_le = label_encoder_position.transform([position])[0]
+sub_position_le = label_encoder_sub_position.transform([sub_position])[0]
+country_of_birth_le = label_encoder_country_of_birth.transform([country_of_birth])[0]
+city_of_birth_le = label_encoder_city_of_birth.transform([city_of_birth])[0]
+
 
 info=[matches_played, yellow_cards, red_cards, goals, assists, minutes_played, age, height_in_cm, highest_market_value_in_eur, competition_id_le, club_name_le, foot_le, position_le, sub_position_le, country_of_birth_le,  city_of_birth_le]
 
