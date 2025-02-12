@@ -39,12 +39,21 @@ except Exception as e:
 
 
 @st.cache(persist=True)
-def load_data():
-    df = pd.read_csv("./df_new.csv")
+def load_data(file_path):
+    df = pd.read_csv(file_path)
     return df
 
-# Solo se ejecutará una vez si ya está en caché
-data = load_data()
+# Cargar diferentes datasets según la necesidad
+df_city = load_data("./df_city.csv")
+df_club_name = load_data("./df_club_name.csv")
+df_comp_id = load_data("./df_comp_id.csv")
+df_country = load_data("./df_country.csv")
+df_foot = load_data("./df_foot.csv")
+df_pos = load_data("./df_pos.csv")
+df_sub_pos = load_data("./df_sub_pos.csv")
+
+
+
 st.markdown('<style>description{color:blue;}</style>', unsafe_allow_html=True)
 st.title('Prediccin de el valor de mercado de un jugador de fútbol')
 st.markdown("<description> Descripcion a gusto </description>", unsafe_allow_html=True)
@@ -62,13 +71,13 @@ minutes_played = st.sidebar.slider('minutes_played', 0, 100, 25)
 age = st.sidebar.slider('age', 0, 100, 25)
 height_in_cm = st.sidebar.slider('height_in_cm', 0, 100, 25)
 highest_market_value_in_eur = st.sidebar.slider('highest_market_value_in_eur', 0, 100, 25)
-club_name = st.selectbox('Select a club name', data['club_name'])
-foot = st.selectbox('Select a foot', data['foot'])
-position = st.selectbox('Select a position', data['position'])
-sub_position = st.selectbox('Select a sub position', data['sub_position'])
-country_of_birth = st.selectbox('Select a country of birth', data['country_of_birth'])
-city_of_birth= st.selectbox('Select a city of birth', data['city_of_birth'])
-competition_id = st.selectbox('Select a competition', data['competition_id'])
+club_name = st.selectbox('Select a club name', df_club_name)
+foot = st.selectbox('Select a foot', df_foot)
+position = st.selectbox('Select a position', df_pos)
+sub_position = st.selectbox('Select a sub position', df_sub_pos)
+country_of_birth = st.selectbox('Select a country of birth', df_country)
+city_of_birth= st.selectbox('Select a city of birth', df_city)
+competition_id = st.selectbox('Select a competition', df_comp_id)
 
 
 competition_id_le = label_encoder_competition_id.transform([competition_id])[0]
