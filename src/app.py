@@ -13,7 +13,7 @@ label_encoder_city_of_birth=load(open("./le_city_of_birth.sav", "rb"))
 label_encoder_country_of_birth=load(open("./le_country_of_birth.sav", "rb"))
 label_encoder_competition_id=load(open("./le_competition_id.sav", "rb"))
 label_encoder_club_name=load(open("./le_club_name.sav", "rb"))
-label_encoder_foot=load(open("./le_foot", "rb"))
+label_encoder_foot=load(open("./le_foot.sav", "rb"))
 label_encoder_sub_position=load(open("./le_sub_position.sav", "rb"))
 label_encoder_position=load(open("./le_position.sav", "rb"))
 
@@ -26,7 +26,7 @@ def cargar_modelo_comprimido(ruta):
     return modelo
 
 # Define la ruta del modelo comprimido
-RUTA_MODELO = "./src/modelo.pkl.gz"
+RUTA_MODELO = "./modelo.pkl.gz"
 
 # Intenta cargar el modelo
 try:
@@ -40,7 +40,7 @@ except Exception as e:
 
 @st.cache(persist=True)
 def load_data():
-    df = pd.read_csv("./src/df_new.csv")
+    df = pd.read_csv("./df_new.csv")
     return df
 
 # Solo se ejecutará una vez si ya está en caché
