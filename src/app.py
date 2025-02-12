@@ -9,13 +9,13 @@ from pickle import load
 
 #print(os.getcwd())
 
-label_encoder_city_of_birth=load(open("./src/le_city_of_birth.sav", "rb"))
-label_encoder_country_of_birth=load(open("./src/le_country_of_birth.sav", "rb"))
-label_encoder_competition_id=load(open("./src/le_competition_id.sav", "rb"))
-label_encoder_club_name=load(open("./src/le_club_name.sav", "rb"))
-label_encoder_foot=load(open("./src/le_foot", "rb"))
-label_encoder_sub_position=load(open("./src/le_sub_position.sav", "rb"))
-label_encoder_position=load(open("./src/le_position.sav", "rb"))
+label_encoder_city_of_birth=load(open("./le_city_of_birth.sav", "rb"))
+label_encoder_country_of_birth=load(open("./le_country_of_birth.sav", "rb"))
+label_encoder_competition_id=load(open("./le_competition_id.sav", "rb"))
+label_encoder_club_name=load(open("./le_club_name.sav", "rb"))
+label_encoder_foot=load(open("./le_foot", "rb"))
+label_encoder_sub_position=load(open("./le_sub_position.sav", "rb"))
+label_encoder_position=load(open("./le_position.sav", "rb"))
 
 def cargar_modelo_comprimido(ruta):
     """Carga el modelo comprimido con gzip."""
