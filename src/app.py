@@ -26,7 +26,7 @@ def cargar_modelo_comprimido(ruta):
     return modelo
 
 # Define la ruta del modelo comprimido
-RUTA_MODELO = "./src/modelo.pkl.gz"
+RUTA_MODELO = "./modelo.pkl.gz"
 
 # Intenta cargar el modelo
 try:
