@@ -38,19 +38,19 @@ except Exception as e:
     st.stop()  # Detiene la app si no se puede cargar el modelo
 
 
-#@st.cache(persist=True)
-#def load_data(file_path):
- #   df = pd.read_csv(file_path)
- #   return df
+@st.cache(persist=True)
+def load_data(file_path):
+    df = pd.read_csv(file_path)
+    return df
 
 # Cargar diferentes datasets según la necesidad
 #df_city = load_data("./df_city.csv")
-#df_club_name = load_data("./df_club_name.csv")
-#df_comp_id = load_data("./df_comp_id.csv")
-#df_country = load_data("./df_country.csv")
-#df_foot = load_data("./df_foot.csv")
-#df_pos = load_data("./df_pos.csv")
-#df_sub_pos = load_data("./df_sub_pos.csv")
+df_club_name = load_data("./df_club_name.csv")
+df_comp_id = load_data("./df_comp_id.csv")
+df_country = load_data("./df_country.csv")
+df_foot = load_data("./df_foot.csv")
+df_pos = load_data("./df_pos.csv")
+df_sub_pos = load_data("./df_sub_pos.csv")
 
 
 
@@ -72,13 +72,13 @@ age = st.sidebar.slider('age', 0, 100, 25)
 height_in_cm = st.sidebar.slider('height_in_cm', 0, 100, 25)
 highest_market_value_in_eur = st.sidebar.slider('highest_market_value_in_eur', 0, 100, 25)
 
-club_name = st.sidebar.selectbox('Select a club name', ["boca","river"])
-foot = st.sidebar.selectbox('Select a foot', ["izquierda","derecha"])
-position = st.sidebar.selectbox('Select a position', ["medio", "defensa"])
-sub_position = st.sidebar.selectbox('Select a sub position', ["mediocampista", "defensor"])
-country_of_birth = st.sidebar.selectbox('Select a country of birth', ["argentina", "brasil"])
+club_name = st.sidebar.selectbox('Select a club name', df_club_name)
+foot = st.sidebar.selectbox('Select a foot', df_foot)
+position = st.sidebar.selectbox('Select a position', df_pos)
+sub_position = st.sidebar.selectbox('Select a sub position', df_sub_pos)
+country_of_birth = st.sidebar.selectbox('Select a country of birth', df_country)
 #city_of_birth= st.selectbox('Select a city of birth', ["lomas", "lanus"])
-competition_id = st.sidebar.selectbox('Select a competition', ["liga","copa"])
+competition_id = st.sidebar.selectbox('Select a competition', df_comp_id)
 
 
 #club_name = st.selectbox('Select a club name', df_club_name)
