@@ -1,6 +1,12 @@
-## Título del proyecto
+## Proyecto: FútbolMarket
 
-Este repositorio es de un proyecto final del bootcamp de 4GeeksAcademy de Data Science and Machine Learning.
+Valor de jugadores en el mercado del fútbol.
+
+## Descripción del proyecto:
+
+Este proyecto utiliza técnicas de machine learning para predecir el valor de mercado de jugadores de fútbol en función de variables como la edad y nacionalidad del jugador; la liga; equipo al cual pertenece; cantidad de goles, minutos jugados, tarjetas rojas y amarillas por partido; entre otros.
+
+El proyecto se enmarca en el proyecto final del bootcamp de 4GeeksAcademy de Data Science and Machine Learning.
 
 Autores: 
 - Guazzelli, Victoria Laura.
@@ -8,9 +14,9 @@ Autores:
 
 ## Objetivo:
 
-El objetivo de este proyecto es determinar el valor de mercado de jugadores de futbol de distintas ligas.
+El objetivo es aplicar modelos de regresión y explorar la importancia de las variables para entender qué factores influyen en el precio de mercado de los jugadores de fútbol.
 
-## Dataset
+## Análisis.
 
 La información se ha obtenido de Kaggle https://www.kaggle.com/datasets/davidcariboo/player-scores.
 
