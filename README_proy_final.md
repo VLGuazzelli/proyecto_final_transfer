@@ -24,16 +24,13 @@ La información se ha obtenido de Kaggle https://www.kaggle.com/datasets/davidca
 
 - appearence.csv: Un dataset en el cual cada registro contiene información de cada jugador en cada partido de diferentes ligas desde el año 2012 al 2024. 
 
-- appearence_agrupado.csv:
+Dificultad: Gran cantidad de registros (más de 1.650.000) y su gran tamaño no permitía trabajarlo en codespace.
 
-Dificultad: 
-a sido trabajado en el google colab en el siguiente link:
+Solución: Hemos generado un nuevo dataset (appearence_agrupado.csv) que ha sido trabajado en el google colab en el siguiente link:
 https://colab.research.google.com/drive/1kkoDlp4htYlhvd1pJ4Mg8GcqiJniWnwx#scrollTo=55sTvyXtUQs0
-pues el original tiene un tamaño grande y no permitía trabajarlo en github.
 
-Objetivo:
-Generar un dataset con los partidos jugados de cada jugador, agrupando en una misma fila los partidos jugados el mismo año, en cada liga.
-Ennumeramos el precedimiento para obtenerlo:
+Cada registro de dicho dataset contiene la información de los partidos de cada jugador en cada liga, unificandolos en el mismo año (teniendo en cuenta la edad del jugador). 
+A continuación describimos el procedimiento:
 
 1. Selección de columnas relevantes en el dataset appearence:
 'game_id': identificación de cada partido, 
