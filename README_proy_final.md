@@ -45,13 +45,13 @@ A continuación describimos el procedimiento:
 'assists': cantidad de asistencias del jugador en el partido, 
 'minutes_played': cantidad de minutos jugador por jugador en el partido.
 
-2. Adición de columnas de otros dataset (Herramienta: merge):
+2. Adición de columnas de otros dataset (Herramienta de pandas: merge):
 'club_name': nombre del club del jugador, 
-'date_of_birth': fecha de nacimiento del jugador (para poder generar la edad),
+'date_of_birth': fecha de nacimiento del jugador (para poder calcular la edad en cada partido),
 'age': edad del jugador en el partido.
 
 3. Agrupación de filas por jugador, año y liga (Herramienta: groupby). Generando:
-'matches_played': cantidad de partidos jugados,
+'matches_played': cantidad de partidos jugados (de cada jugador en cada liga y en cada año),
 'yellow_cards': promedio de tarjetas amarillas,
 'red_cards': promedio de tarjetas rojas,
 'goals': promedio de goles,
@@ -59,6 +59,3 @@ A continuación describimos el procedimiento:
 'minutes_played': promedio de minutos jugados,
 "age": edad del jugador. 
 
-
-Procesos:
-Generar una columna con la edad del jugador en dicho partido.
