@@ -18,10 +18,12 @@ El objetivo es aplicar modelos de regresión y explorar la importancia de las va
 
 ## Análisis.
 
-La información se ha obtenido de Kaggle https://www.kaggle.com/datasets/davidcariboo/player-scores.
+La información se ha obtenido de Kaggle https://www.kaggle.com/datasets/davidcariboo/player-scores, donde se encuentran varios dataset con información de jugadores, de ligas, de partidos, que hubo que procesar para hacer un dataset final. 
 
-Preprocesamiento de dataset:
-- 
- donde se encuentran varios dataset con información de jugadores, de ligas, de partidos, que hubo que procesar para hacer un dataset final. 
+Preprocesamiento de los dataset:
 
-Debido al gran tamaño de 
+El dataset appearence_agrupado.csv, ha sido trabajado en el google colab en el siguiente link:
+https://colab.research.google.com/drive/1kkoDlp4htYlhvd1pJ4Mg8GcqiJniWnwx#scrollTo=55sTvyXtUQs0
+pues el original tiene un tamaño grande y no permitía trabajarlo en github.
+
+
