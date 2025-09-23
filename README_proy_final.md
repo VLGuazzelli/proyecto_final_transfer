@@ -20,10 +20,48 @@ El objetivo es aplicar modelos de regresión y explorar la importancia de las va
 
 La información se ha obtenido de Kaggle https://www.kaggle.com/datasets/davidcariboo/player-scores, donde se encuentran varios dataset con información de jugadores, de ligas, de partidos, que hubo que procesar para hacer un dataset final. 
 
-Preprocesamiento de los dataset:
+### Preprocesamiento de los dataset:
 
-El dataset appearence_agrupado.csv, ha sido trabajado en el google colab en el siguiente link:
+- appearence.csv: Un dataset en el cual cada registro contiene información de cada jugador en cada partido de diferentes ligas desde el año 2012 al 2024. 
+
+- appearence_agrupado.csv:
+
+Dificultad: 
+a sido trabajado en el google colab en el siguiente link:
 https://colab.research.google.com/drive/1kkoDlp4htYlhvd1pJ4Mg8GcqiJniWnwx#scrollTo=55sTvyXtUQs0
 pues el original tiene un tamaño grande y no permitía trabajarlo en github.
 
+Objetivo:
+Generar un dataset con los partidos jugados de cada jugador, agrupando en una misma fila los partidos jugados el mismo año, en cada liga.
+Ennumeramos el precedimiento para obtenerlo:
 
+1. Selección de columnas relevantes en el dataset appearence:
+'game_id': identificación de cada partido, 
+'player_id': identificación de jugador, 
+'player_club_id': identificación del club del jugador, 
+'date': fecha del partido, 
+'player_name': nombre del jugador, 
+'competition_id': identificación de la liga, 
+'yellow_cards': tarjetas amarillas del jugador en el partido, 
+'red_cards': tarjetas rojas del jugador en el partido, 
+'goals': cantidad de goles del jugador en el partido, 
+'assists': cantidad de asistencias del jugador en el partido, 
+'minutes_played': cantidad de minutos jugador por jugador en el partido.
+
+2. Adición de columnas de otros dataset (Herramienta: merge):
+'club_name': nombre del club del jugador, 
+'date_of_birth': fecha de nacimiento del jugador (para poder generar la edad),
+'age': edad del jugador en el partido.
+
+3. Agrupación de filas por jugador, año y liga (Herramienta: groupby). Generando:
+'matches_played': cantidad de partidos jugados,
+'yellow_cards': promedio de tarjetas amarillas,
+'red_cards': promedio de tarjetas rojas,
+'goals': promedio de goles,
+'assists': promedio de asistencias,
+'minutes_played': promedio de minutos jugados,
+"age": edad del jugador. 
+
+
+Procesos:
+Generar una columna con la edad del jugador en dicho partido.
